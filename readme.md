@@ -10,6 +10,12 @@ Let's check out some terminology below.
 - `volume` -> sometimes-shared, persistent storage
 - `namespace` -> virtual cluster on top of an underlying physical cluster
 
+### Service Types
+- `clusterIP` -> exposes services only inside the cluster (default)
+- `nodePort` -> exposes services at the specified port on all nodes (`<node-ip>:<nodePort>`)
+- `loadBalancer` -> exposes the service with a cloud-provider's load balancer.
+- `externalName` -> this maps a service to endpoints completely outside of the cluster
+
 ### Controllers
 - `replicaSet` -> ensures a certain number of pods are running
 - `deployment` -> declaritively manages a `replicaSet`
@@ -25,3 +31,8 @@ Let's check out some terminology below.
 - `node` -> individual machine/vm that make up the cluster
     - `kubelet` -> service that communicates with the master
     - `kube-proxy` -> proxy for connecting to the cluster network
+
+
+## Resources
+- https://kubernetes.io/docs/home
+
